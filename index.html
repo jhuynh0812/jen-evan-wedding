@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jen & Evan — Vietnam 2027</title>
-<meta name="description" content="Jen & Evan's wedding celebration in Kiên Giang, Vietnam — April 24–May 1, 2027.">
+<meta name="description" content="Jen & Evan's wedding celebration in Ho Chi Minh & Kiên Giang, Vietnam — April 24–May 1, 2027.">
 <style>
 :root{
   --ink:#25231f; --muted:#716d65; --paper:#f7f5f0; --line:#d9d4ca;
@@ -52,6 +52,213 @@ footer{text-align:center;padding:55px 20px;color:var(--muted);font-family:Georgi
  .hero:before{inset:5%}
 }
 </style>
+
+<style id="cute-wedding-enhancements">
+  :root {
+    --baby-blue: #b9dbea;
+    --soft-blue: #7fb8d1;
+    --baby-pink: #f2c3d0;
+    --deep-pink: #c98fa3;
+    --cream: #fffaf7;
+  }
+  body {
+    background:
+      radial-gradient(circle at 8% 12%, rgba(242,195,208,.28) 0 45px, transparent 46px),
+      radial-gradient(circle at 92% 18%, rgba(185,219,234,.30) 0 55px, transparent 56px),
+      linear-gradient(180deg, #fffdfc 0%, var(--cream) 100%);
+  }
+  body::before, body::after {
+    position: fixed;
+    z-index: 20;
+    pointer-events: none;
+    font-size: 18px;
+    opacity: .55;
+  }
+  body::before { content: "♡"; top: 14%; left: 2%; color: var(--deep-pink); }
+  body::after  { content: "♡"; bottom: 18%; right: 2%; color: var(--soft-blue); }
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before, .hero::after {
+    content: "✿";
+    position: absolute;
+    font-size: 64px;
+    opacity: .22;
+    color: var(--deep-pink);
+  }
+  .hero::before { top: 8%; left: 7%; transform: rotate(-18deg); }
+  .hero::after { right: 7%; bottom: 10%; color: var(--soft-blue); transform: rotate(18deg); }
+
+  .hero h1, .hero h2 {
+    text-shadow: 0 2px 18px rgba(127,184,209,.15);
+  }
+
+  .card {
+    border: 1px solid rgba(201,143,163,.20);
+    border-radius: 24px;
+    background: rgba(255,255,255,.82);
+    box-shadow: 0 14px 35px rgba(95,130,145,.10);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 42px rgba(95,130,145,.14);
+  }
+
+  .cta {
+    border-radius: 999px !important;
+    box-shadow: 0 8px 20px rgba(201,143,163,.22);
+    letter-spacing: .03em;
+  }
+
+  .timeline, .journey, .section {
+    position: relative;
+  }
+
+  .timeline::before {
+    background: linear-gradient(var(--baby-pink), var(--baby-blue)) !important;
+  }
+
+  .day {
+    position: relative;
+  }
+  .day::before {
+    border: 4px solid #fff !important;
+    box-shadow: 0 0 0 2px var(--baby-pink), 0 3px 10px rgba(0,0,0,.08);
+  }
+
+  footer {
+    position: relative;
+  }
+  footer::before {
+    content: "♡  ✿  ♡";
+    display: block;
+    margin-bottom: 10px;
+    color: var(--deep-pink);
+    letter-spacing: .5em;
+    font-size: 18px;
+  }
+
+  @media (max-width: 700px) {
+    .hero::before, .hero::after { font-size: 42px; }
+  }
+</style>
+
+
+<style id="richer-wedding-design">
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+:root{
+  --blue:#a9d5e6; --blue-deep:#5f9fba; --pink:#efb7c9; --pink-deep:#c9829b;
+  --ink:#35515d; --cream:#fffaf8; --white:#fff;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',sans-serif!important;
+  color:var(--ink)!important;
+  background:
+    radial-gradient(ellipse at 0% 15%,rgba(239,183,201,.20),transparent 34%),
+    radial-gradient(ellipse at 100% 40%,rgba(169,213,230,.25),transparent 34%),
+    linear-gradient(180deg,#fffefd 0%,#fff9f8 100%)!important;
+}
+h1,h2,h3{font-family:'Cormorant Garamond',serif!important;color:#35515d}
+h1{font-size:clamp(4rem,11vw,8rem)!important;line-height:.82!important;letter-spacing:.02em!important}
+h2{font-size:clamp(2.3rem,5vw,4rem)!important}
+h3{font-size:1.8rem!important}
+
+.hero{
+  min-height:88vh!important;
+  display:flex!important; flex-direction:column!important; justify-content:center!important;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.15),rgba(255,250,248,.88)),
+    radial-gradient(circle at 50% 30%,rgba(169,213,230,.30),transparent 42%)!important;
+  border-bottom-left-radius:55px!important;border-bottom-right-radius:55px!important;
+  box-shadow:0 18px 50px rgba(80,120,135,.10);
+}
+.hero:before{
+  content:"✿";position:absolute!important;left:7%;top:13%;font-size:95px!important;
+  color:var(--pink)!important;opacity:.55!important;transform:rotate(-18deg);
+}
+.hero:after{
+  content:"❀";position:absolute!important;right:7%;bottom:15%;font-size:105px!important;
+  color:var(--blue-deep)!important;opacity:.38!important;transform:rotate(15deg);
+}
+.hero .eyebrow,.hero p{position:relative;z-index:2}
+.hero .eyebrow{font-size:.78rem!important;letter-spacing:.28em!important;color:var(--pink-deep)!important}
+.hero h1:after{
+  content:"";display:block;width:110px;height:2px;margin:28px auto 18px;
+  background:linear-gradient(90deg,transparent,var(--pink-deep),transparent);
+}
+
+section{position:relative}
+section:after{
+  content:"✦  ♡  ✦";display:block;text-align:center;margin:35px 0 0;
+  color:var(--pink-deep);letter-spacing:.45em;font-size:.85rem;opacity:.65;
+}
+.card{
+  position:relative!important;overflow:hidden!important;
+  border:1px solid rgba(201,130,155,.20)!important;
+  border-radius:28px!important;
+  background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(248,252,253,.86))!important;
+  box-shadow:0 15px 45px rgba(74,112,125,.11)!important;
+  padding:30px!important;
+}
+.card:before{
+  content:"";position:absolute;left:-35px;top:-35px;width:95px;height:95px;
+  border:2px solid rgba(239,183,201,.35);border-radius:50%;
+}
+.card:after{
+  content:"✿";position:absolute;right:17px;top:12px;font-size:28px;color:var(--blue-deep);opacity:.25;
+}
+.card:hover{transform:translateY(-6px)!important;box-shadow:0 22px 55px rgba(74,112,125,.16)!important}
+
+.cta{
+  display:inline-block!important;
+  padding:14px 28px!important;border-radius:999px!important;
+  background:linear-gradient(135deg,var(--pink-deep),#d99aae)!important;
+  color:#fff!important;border:0!important;
+  box-shadow:0 10px 25px rgba(201,130,155,.28)!important;
+  font-weight:600!important;
+}
+.cta:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(201,130,155,.35)!important}
+
+.timeline{
+  max-width:900px!important;margin:auto!important;
+}
+.timeline .day{
+  padding:26px 30px!important;margin:18px 0!important;
+  border-radius:24px!important;
+  background:rgba(255,255,255,.72)!important;
+  border:1px solid rgba(169,213,230,.38)!important;
+  box-shadow:0 10px 28px rgba(80,120,135,.07);
+}
+.timeline .day strong{
+  color:var(--pink-deep)!important;font-family:'Cormorant Garamond',serif!important;
+  font-size:1.45rem!important;
+}
+
+nav{
+  backdrop-filter:blur(14px)!important;
+  background:rgba(255,255,255,.78)!important;
+  border-bottom:1px solid rgba(169,213,230,.22)!important;
+}
+
+footer{
+  margin-top:50px!important;padding:55px 20px!important;
+  background:linear-gradient(180deg,rgba(169,213,230,.14),rgba(239,183,201,.16))!important;
+  border-top-left-radius:55px!important;border-top-right-radius:55px!important;
+}
+footer:before{content:"♡  ✿  ♡";display:block;color:var(--pink-deep);font-size:22px;letter-spacing:.35em;margin-bottom:14px}
+
+@media(max-width:700px){
+  .hero{min-height:78vh!important;border-bottom-left-radius:35px!important;border-bottom-right-radius:35px!important}
+  .hero:before{font-size:55px!important;left:3%}.hero:after{font-size:60px!important;right:3%}
+  .card{padding:24px!important;border-radius:22px!important}
+}
+</style>
+
 </head>
 <body>
 <nav>
@@ -70,7 +277,7 @@ footer{text-align:center;padding:55px 20px;color:var(--muted);font-family:Georgi
     <div class="kicker">Vietnam · 2027</div>
     <h1>Jen & Evan</h1>
     <div class="names">Bảo Như & Hiệp Thịnh</div>
-    <div class="date">April 24 — May 1, 2027 · Kiên Giang, Vietnam</div>
+    <div class="date">April 24 — May 1, 2027 · Ho Chi Minh and Kien Giang, Vietnam</div>
     <p>Come celebrate with us, where family, tradition, and new memories meet.</p>
   </div>
   <div class="scroll">Scroll to explore</div>
@@ -103,6 +310,7 @@ footer{text-align:center;padding:55px 20px;color:var(--muted);font-family:Georgi
       <div class="day"><strong>Apr 24</strong><div>Lễ Vu Quy<span>Our first wedding ceremony.</span></div></div>
       <div class="day"><strong>Apr 25–30</strong><div>Enjoy and Explore Vietnam<span>Take time to enjoy Vietnam, explore, and make the most of your trip.</span></div></div>
       <div class="day"><strong>May 1</strong><div>Lễ Thành Hôn<span>Our second wedding ceremony and final wedding celebration.</span></div></div>
+      <div class="day"><strong>After May 1</strong><div>A Little More Fun in Kiên Giang<span>After the wedding, we’re planning to have a little fun in the groom’s hometown in Kiên Giang. If you’re staying longer, we’d love for you to join us and enjoy a little more of Vietnam together.</span></div></div>
     </div>
   </div>
 </div>
@@ -111,12 +319,12 @@ footer{text-align:center;padding:55px 20px;color:var(--muted);font-family:Georgi
   <div class="section-number">04 — Travel Information</div>
   <h2>Everything you need<br>for Vietnam.</h2>
   <div class="card-grid">
-    <article class="card"><h3>Getting There</h3><p>US → Vietnam flight guidance and recommended airport connections.</p></article>
-    <article class="card"><h3>Where to Stay</h3><p>Hotel recommendations and the easiest areas for wedding guests.</p></article>
-    <article class="card"><h3>Getting Around</h3><p>Airport transfers, local transportation, and wedding-day logistics.</p></article>
-    <article class="card"><h3>Before You Go</h3><p>Passport, visa, eSIM, currency, weather, and packing notes.</p></article>
-    <article class="card"><h3>Eat & Explore</h3><p>A curated list of Vietnamese food and places worth making time for.</p></article>
-    <article class="card"><h3>Vietnamese Wedding 101</h3><p>A simple guide to traditions, etiquette, and what each part means.</p></article>
+    <article class="card"><h3>Getting There</h3><p><strong>MCO → SGN</strong><br>Ho Chi Minh City’s airport can be very crowded, so we recommend booking a flight that arrives in the evening or late at night rather than in the morning.</p></article>
+    <article class="card"><h3>Where to Stay</h3><p>We would prefer <strong>Airbnb</strong> over Marriott hotels. Even with the discount, Marriott can be a little pricey, and Airbnb can be a more comfortable and flexible option.</p></article>
+    <article class="card"><h3>Getting Around</h3><p>We recommend using <strong>Grab</strong> for transportation. You can also use <strong>Xanh SM</strong> or <strong>Vinasun Taxi</strong>. Vietnam has lots of motorcycles, so consider trying a <strong>GrabBike</strong> for the full experience!</p></article>
+    <article class="card"><h3>Before You Go</h3><p>Bring your <strong>passport</strong>, check your <strong>visa</strong> requirements, and consider getting an <strong>eSIM</strong>. For currency, <strong>do not exchange money at the airport</strong>. Ask us and we’ll send you an address for a place with a good exchange rate.</p></article>
+    <article class="card"><h3>Eat & Explore</h3><p>Don’t feel like you need to eat at fancy or luxury restaurants. Try the local favorites: <strong>street food, boba, phở, bánh mì</strong>, and all the little food spots you find along the way!</p></article>
+    <article class="card"><h3>Vietnam 101</h3><p><strong>Thank you — Cảm ơn</strong><br><strong>Greetings — Hello or Xin chào</strong><br>A few simple phrases to help you feel right at home.</p></article>
   </div>
 </section>
 
@@ -132,7 +340,7 @@ footer{text-align:center;padding:55px 20px;color:var(--muted);font-family:Georgi
 
 <footer>
   Jen & Evan · Bảo Như & Hiệp Thịnh<br>
-  Kiên Giang, Vietnam · Lễ Vu Quy April 24 · Lễ Thành Hôn May 1, 2027
+  Ho Chi Minh and Kien Giang, Vietnam · Lễ Vu Quy April 24 · Lễ Thành Hôn May 1, 2027
 </footer>
 </body>
 </html>
