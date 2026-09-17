@@ -1,0 +1,40 @@
+name: Update recommended arrival window
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  update-arrival:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v4
+
+      - name: Update recommended arrival section
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path("index.html")
+          html = path.read_text(encoding="utf-8")
+          old = '''<div class="day"><strong>Apr 20–22</strong><div><h3>Recommended arrival window</h3><p>Flights from Orlando to Vietnam typically involve two layovers, multiple time zones, and approximately 25–30 hours of travel time—and it may take even longer if there are delays.<br><br>Your first layover will usually be in a U.S. city, such as New York, Los Angeles, San Francisco, or Chicago. Your second layover will typically be in an Asian hub, depending on the airline you book, with common options including South Korea, Japan, Taiwan, or Hong Kong.<br><br>Vietnam is 11 hours ahead of Orlando from March through November, so the time difference can take some time to adjust to.<br><br>For this reason, we highly recommend departing around April 20. This will give you some time to rest and recover from the long journey, adjust to the time difference, and explore a little of Ho Chi Minh City before joining us for our first wedding ceremony.<br><br>Most importantly, we truly cannot put into words how much it means to us that you are willing to travel so far to celebrate our wedding with us. Having you there for this special chapter of our lives means more than you know. ❤️</p></div></div>'''
+          new = '''<div class="day"><strong>Before your ceremony</strong><div><h3>Recommended arrival window</h3><p>Flights from Orlando to Vietnam typically involve two layovers, multiple time zones, and approximately 25–30 hours of travel time—and it may take even longer if there are delays.<br><br>Your first layover will usually be in a U.S. city, such as New York, Los Angeles, San Francisco, or Chicago. Your second layover will typically be in an Asian hub, depending on the airline you book, with common options including South Korea, Japan, Taiwan, or Hong Kong.<br><br>Vietnam is 11 hours ahead of Orlando from March through November, so the time difference can take some time to adjust to.<br><br>If you are joining us for Lễ Vu Quy on April 24, we recommend arriving a couple of days before April 24 so you have time to rest, adjust to the time difference, and explore a little of Ho Chi Minh City before the ceremony.<br><br>May 1 will be our main ceremony, Lễ Tân Hôn, so if you are joining us for May 1, we recommend arriving a couple of days before May 1 for the same reason.<br><br>If you would like to attend both ceremonies, you are more than welcome to come earlier and join us for both! ❤️<br><br>Most importantly, we truly cannot put into words how much it means to us that you are willing to travel so far to celebrate our wedding with us. Having you there for this special chapter of our lives means more than you know. ❤️</p></div></div>'''
+          if old not in html:
+              raise SystemExit("Expected arrival section was not found; no changes made.")
+          path.write_text(html.replace(old, new, 1), encoding="utf-8")
+          PY
+
+      - name: Commit change and remove workflow
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git rm .github/workflows/update-arrival-window.yml
+          git commit -m "Adjust recommended arrival window"
+          git push
