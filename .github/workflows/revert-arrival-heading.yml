@@ -1,0 +1,32 @@
+name: Revert arrival heading
+
+on:
+  push:
+    paths:
+      - '.github/workflows/revert-arrival-heading.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  revert:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restore heading
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          old = "<h3>Let's start from here</h3>"
+          new = "<h3>Recommended arrival window</h3>"
+          if old not in s:
+              raise SystemExit('Target heading not found')
+          p.write_text(s.replace(old, new, 1), encoding='utf-8')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m "Restore recommended arrival heading"
+          git push
