@@ -41,7 +41,7 @@ section{max-width:1100px;margin:auto;padding:105px 7%;position:relative}section:
 </style>
 </head>
 <body>
-<nav><a class="brand" href="#top">Jen & Evan</a><div class="links"><a href="#begin">Let's Begin</a><a href="#celebration">Celebration</a><a href="#journey">Journey</a><a href="#travel">Travel</a><a href="#places">Places</a><a href="#rsvp">RSVP</a></div></nav>
+<nav><a class="brand" href="#top">Jen & Evan</a><div class="links"><a href="#save-the-dates">Countdown</a><a href="#begin">Let's Begin</a><a href="#celebration">Celebration</a><a href="#journey">Journey</a><a href="#travel">Travel</a><a href="#places">Places</a><a href="#rsvp">RSVP</a></div></nav>
 <header class="hero" id="top"><div class="hero-photo"><img class="couple-photo" src="couple-photo.jpg" alt="Jen and Evan" loading="eager"></div><div class="hero-copy"><div class="kicker">Vietnam · 2027</div><h1>Jen & Evan</h1><div class="names">Bảo Như & Hiệp Thịnh</div><div class="date">April 24 — May 1, 2027 · Ho Chi Minh and An Giang, Vietnam</div><p>Come celebrate with us, where family, tradition, and new memories meet.</p><a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSeJwSuf4M8Bu3UzUlbrxKNtQxeLKWHJJi08-Uyk9DhuErUofA/viewform?usp=dialog" target="_blank" rel="noopener">Please RSVP ♡</a></div></header>
 
 <section class="save-the-dates" id="save-the-dates">
@@ -62,8 +62,8 @@ section{max-width:1100px;margin:auto;padding:105px 7%;position:relative}section:
       <div class="month-title">April 2027</div>
       <div class="calendar-grid" aria-label="April 2027 calendar">
         <div class="weekday">Sun</div><div class="weekday">Mon</div><div class="weekday">Tue</div><div class="weekday">Wed</div><div class="weekday">Thu</div><div class="weekday">Fri</div><div class="weekday">Sat</div>
-        <div class="cal-day empty">1</div><div class="cal-day empty">2</div><div class="cal-day empty">3</div>
-        <div class="cal-day">1</div><div class="cal-day">2</div><div class="cal-day">3</div><div class="cal-day">4</div>
+        <div class="cal-day empty">0</div><div class="cal-day empty">0</div><div class="cal-day empty">0</div><div class="cal-day empty">0</div>
+        <div class="cal-day">1</div><div class="cal-day">2</div><div class="cal-day">3</div>
         <div class="cal-day">5</div><div class="cal-day">6</div><div class="cal-day">7</div><div class="cal-day">8</div><div class="cal-day">9</div><div class="cal-day">10</div><div class="cal-day">11</div>
         <div class="cal-day">12</div><div class="cal-day">13</div><div class="cal-day">14</div><div class="cal-day">15</div><div class="cal-day">16</div><div class="cal-day">17</div><div class="cal-day">18</div>
         <div class="cal-day">19</div><div class="cal-day">20</div><div class="cal-day">21</div><div class="cal-day">22</div><div class="cal-day">23</div><div class="cal-day event" title="Lễ Vu Quy">24</div><div class="cal-day">25</div>
@@ -96,7 +96,7 @@ section{max-width:1100px;margin:auto;padding:105px 7%;position:relative}section:
 
 <script>
 (function(){
-  const target = new Date('2027-04-24T12:00:00-04:00').getTime();
+  const target = new Date('2027-04-24T00:00:00+07:00').getTime();
   function updateCountdown(){
     const diff = target - Date.now();
     const values = diff > 0 ? {
